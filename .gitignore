@@ -1,0 +1,20 @@
+# --- Node Modules ---
+node_modules/
+backend/node_modules/
+
+# --- Environment Variables (Bohot Zaroori) ---
+.env
+backend/.env
+.env.local
+.env.development
+
+# --- OS Generated Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- IDE & Editor Files ---
+.vscode/
+.idea/
+*.swp
+*.swo

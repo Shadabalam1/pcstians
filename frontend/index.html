@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCSTians Memories Portal - Patel College of Science & Technology</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Visitor Navbar -->
+    <nav class="visitor-navbar">
+        <div class="nav-brand">
+            <h2>PCSTians Memories🎓 </h2>
+        </div>
+        <a href="login.html" class="admin-link">Admin Login</a>
+    </nav>
+
+    <!-- Hero Section with College Info -->
+    <header class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="college-info">
+                    <h1 class="college-name">Patel College of Science & Technology</h1>
+                    <p class="college-location">📍 Bhopal, Madhya Pradesh</p>
+                    <div class="college-details">
+                        <span class="detail-item">Established Institution 🏛️ </span>
+                        <span class="detail-item">Batch :  2k22 – 2k26</span>
+                        <span class="detail-item">Community 💙 : PCSTians</span>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h2 class="tagline">From Freshers to Graduates</h2>
+                    <p class="subtitle">Every Memory, Every Friendship, Every Moment Lives Here.</p>
+                </div>
+            </div>
+        </div>
+        <img src="images/campus front.jpg" alt="PCST Campus" class="hero-image">
+    </header>
+
+    <!-- Search and Filter Section -->
+    <section class="controls">
+        <input type="text" id="searchInput" placeholder="Search by caption or hashtag...">
+        <select id="yearFilter">
+            <option value="all">All Years</option>
+            <option value="2022">2022 - Beginning of the Journey</option>
+            <option value="2023">2023 - Campus Life & Events</option>
+            <option value="2024">2024 - Projects & Achievements</option>
+            <option value="2025">2025 - Internships & Final Year</option>
+            <option value="2026">2026 - Farewell & Graduation</option>
+        </select>
+        <button id="searchBtn">Search</button>
+    </section>
+
+    <!-- Gallery Grid -->
+    <main class="gallery-container">
+        <h2 class="section-title"> Memory Gallery</h2>
+        <div id="galleryGrid" class="gallery-grid">
+            <!-- Images yahan dynamically load hongi -->
+        </div>
+        <p id="noResults" class="no-results" style="display: none;">No memories found.</p>
+    </main>
+
+
+
+    <!-- Professional Modern Footer -->
+<footer class="professional-footer">
+    <!-- Top Section -->
+    <div class="footer-top">
+        <div class="footer-container">
+            <!-- Column 1: Brand -->
+            <div class="footer-brand">
+                <h2 class="brand-title">🎓 PCSTians</h2>
+                <p class="brand-desc">Preserving precious memories of Patel College of Science & Technology, Batch 2022–2026. Every moment matters, every memory counts.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/pcstians?igsh=MXJjbmkzZTN5YzR3bg==" class="social-icon" title="Instagram"> 🅾 </a>
+                    <a href="https://youtube.com/@riyankainat?si=JxtTV_LWkkxxy9wl" class="social-icon" title="YouTube"> ▷ </a>
+                
+
+                </div>
+            </div>
+            
+            <!-- Column 2: Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">🏠 Home Gallery</a></li>
+                    <li><a href="login.html">🔐 Admin Login</a></li>
+                    <li><a href="#">📅 Year Timeline</a></li>
+                    <li><a href="#">🏆 Achievements</a></li>
+                    <li><a href="#">📖 About Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Contact Info -->
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Address</strong>
+                            <p>Patel College of Science & Technology<br>Bhopal, Madhya Pradesh, India</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>riyankainat@gmail.com</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+91 XXXXX XXXXX</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+        <div class="footer-container">
+            <div class="bottom-content">
+                <p class="copyright">© 2026 PCSTians Memories Portal. All Rights Reserved.</p>
+                <p class="dev-credit">Crafted with <span class="heart">❤️</span> by <span class="dev-name">Riyan Kainat</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ⬆️ Top
+    </button>
+</footer>
+
+    
+
+    <script src="js/gallery.js"></script>
+</body>
+</html>
