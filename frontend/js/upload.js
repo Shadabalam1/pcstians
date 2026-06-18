@@ -69,7 +69,7 @@ uploadForm.addEventListener('submit', async (e) => {
     formData.append('year', document.getElementById('year').value);
 
     try {
-        const response = await fetch('http://localhost:5000/api/memories/upload', {
+        const response = await fetch('https://pcstians.onrender.com/api/memories/upload', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -115,7 +115,7 @@ videoForm.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch('http://localhost:5000/api/memories/add-video', {
+        const response = await fetch('https://pcstians.onrender.com/api/memories/add-video', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`,
