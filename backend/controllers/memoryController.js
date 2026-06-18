@@ -1,6 +1,6 @@
 // backend/controllers/memoryController.js
 const cloudinary = require('../config/cloudinary');
-const Memory = require('../models/Memory');
+const Memory = require('../models/memory');
 
 // Helper function: Buffer ko Cloudinary par upload karne ke liye
 const uploadToCloudinary = (buffer) => {
