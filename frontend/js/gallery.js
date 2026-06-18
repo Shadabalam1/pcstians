@@ -15,7 +15,7 @@ async function loadMemories() {
     if (year !== 'all') queryString += `year=${year}`;
 
     try {
-        const response = await fetch(`http://localhost:5000/api/memories${queryString}`);
+        const response = await fetch(`https://pcstians.onrender.com/api/memories${queryString}`);
         const data = await response.json();
 
         galleryGrid.innerHTML = ''; 
@@ -80,7 +80,7 @@ galleryGrid.addEventListener('click', async (e) => {
         
         if (isConfirmed) {
             try {
-                const response = await fetch(`http://localhost:5000/api/memories/${memoryId}`, {
+                const response = await fetch(`https://pcstians.onrender.com/api/memories/${memoryId}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${token}`
