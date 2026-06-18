@@ -1,4 +1,3 @@
-// backend/controllers/memoryController.js
 const cloudinary = require('../config/cloudinary');
 const Memory = require('../models/memory');
 
@@ -6,7 +5,7 @@ const Memory = require('../models/memory');
 const uploadToCloudinary = (buffer) => {
   return new Promise((resolve, reject) => {
     const uploadStream = cloudinary.uploader.upload_stream(
-      { folder: 'pcstians_memories' }, // Cloudinary par folder ka naam
+      { folder: 'pcstians_memories' }, 
       (error, result) => {
         if (error) reject(error);
         else resolve(result);
@@ -16,8 +15,6 @@ const uploadToCloudinary = (buffer) => {
   });
 };
 
-// @desc    Upload a new memory
-// @route   POST /api/memories/upload
 exports.uploadMemory = async (req, res) => {
   try {
     const { caption, hashtags, year } = req.body;
@@ -64,8 +61,6 @@ exports.uploadMemory = async (req, res) => {
   }
 };
 
-// @desc    Get all memories (with search and filter)
-// @route   GET /api/memories
 exports.getMemories = async (req, res) => {
   try {
     const { year, search } = req.query;
@@ -97,36 +92,6 @@ exports.getMemories = async (req, res) => {
   }
 };
 
-// @desc    Delete a memory
-// @route   DELETE /api/memories/:id
-// exports.deleteMemory = async (req, res) => {
-//   try {
-//     // 1. Database se memory dhundhein
-//     const memory = await Memory.findById(req.params.id);
-    
-//     if (!memory) {
-//       return res.status(404).json({ message: 'Memory not found' });
-//     }
-
-//     // 2. Cloudinary se image delete karein
-//     await cloudinary.uploader.destroy(memory.cloudinaryId);
-
-//     // 3. MongoDB se record delete karein
-//     await memory.deleteOne();
-
-//     res.status(200).json({
-//       success: true,
-//       message: 'Memory deleted successfully'
-//     });
-
-//   } catch (error) {
-//     res.status(500).json({ message: 'Server Error', error: error.message });
-//   }
-// };
-
-
-// @desc    Delete a memory (Image or Video)
-// @route   DELETE /api/memories/:id
 exports.deleteMemory = async (req, res) => {
   try {
     // 1. Database se memory dhundhein
@@ -136,13 +101,10 @@ exports.deleteMemory = async (req, res) => {
       return res.status(404).json({ message: 'Memory not found' });
     }
 
-    // 2. ✅ FIX: Agar memory 'image' hai, tabhi Cloudinary se delete karein
     if (memory.type === 'image' && memory.cloudinaryId) {
       await cloudinary.uploader.destroy(memory.cloudinaryId);
     }
-    // Agar 'video' hai, toh Cloudinary wala step skip ho jayega
-
-    // 3. MongoDB se record delete karein
+   
     await memory.deleteOne();
 
     res.status(200).json({
