@@ -1,10 +1,6 @@
-// backend/server.js
-
-// ✅ 1. SABSE PEHLE dotenv ko load karein
 const dotenv = require('dotenv');
 dotenv.config(); 
 
-// 2. Uske baad baaki packages import karein
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
